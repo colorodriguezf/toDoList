@@ -21,7 +21,8 @@ class TaskController {
     function showHome() {
         $logueado = $this->authHelper->checkLogedIn();
         if($logueado) {
-            $this->view->showHome($_SESSION['nombre_usuario']);
+            $tareas= $this->model->getTasks($_SESSION['nombre_usuario']);
+            $this->view->showHome($_SESSION['nombre_usuario'], $_SESSION['user_id'], $tareas);
         }
         else {
             $this->view->showLoginLocation();

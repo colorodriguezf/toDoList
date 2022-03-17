@@ -10,8 +10,10 @@ class TaskView {
         $this->smarty->display('templates/showLoginORRegister.tpl');
     }
 
-    function showHome($nombre_usuario) {
-        $this->smarty->assign('nombre_usaurio'. $nombre_usuario);
+    function showHome($nombre_usuario="", $user_id = "", $tareas="") {
+        $this->smarty->assign('nombre_usuario', $nombre_usuario);
+        $this->smarty->assign('user_id', $user_id);
+        $this->smarty->assign('tareas', $tareas);
         $this->smarty->display('templates/home.tpl');
 
     }

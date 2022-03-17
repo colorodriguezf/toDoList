@@ -47,6 +47,12 @@ class UserController {
             } 
           }
 
+          function logout() {
+            session_start();
+            session_destroy();
+            $this->taskView->showLoginLocation();
+          }
+
 }
 
 
