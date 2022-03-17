@@ -8,15 +8,14 @@ define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"]
 
 $router = new Router();
 
+$router->setDefaultRoute('TaskController','showLoginORRegister');
 
-$router->addRoute('login', 'GET', 'TaskController', 'showLoginORRegister');
+$router->addRoute('home', 'GET', 'TaskController', 'showHome');
 
-$router->addRoute('registrate', 'GET', 'UserController', 'register');
-$router->addRoute('login', 'POST', 'UserController', 'UserRegister');
+$router->addRoute('register', 'POST', 'UserController', 'UserRegister');
 $router->addRoute('verify', 'POST', 'UserController', 'verifyLogin');
 $router->addRoute('logout', 'GET', 'UserController', 'logout');
 
-$router->addRoute('home', 'GET', 'TaskController', 'showHome');
 
 
 

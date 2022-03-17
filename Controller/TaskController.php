@@ -14,5 +14,18 @@ class TaskController {
         $this->authHelper = new AuthHelper();
     }
 
+    function showLoginORRegister() {
+        $this->view->showLoginORRegister();
+    }
+
+    function showHome() {
+        $logueado = $this->authHelper->checkLogedIn();
+        if($logueado) {
+            $this->view->showHome($_SESSION['nombre_usuario']);
+        }
+        else {
+            $this->view->showLoginLocation();
+        }
+    }
 
 }

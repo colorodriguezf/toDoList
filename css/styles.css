@@ -1,0 +1,63 @@
+@media only screen and (max-width:480px) {
+    body {
+        background-color: rgb(234, 245, 243);
+    }
+    img {
+        width: 100%;
+    }
+    .usuarioOcontraseña {
+        margin-left:20px;
+        margin-top:30px;
+    }
+    .dataUser input {
+        width:250px;
+        height: 50px;
+        border-radius:10px;
+        margin-top:15px;
+        font-size: 1.5rem;
+    }
+    .iniciarSesion {
+        margin-top: 20px;
+        border-radius: 10px;
+        width:180px;
+        height:45px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: rgb(250, 153, 153);
+        background-color: rgb(138, 207, 179);
+    }
+    /* .errorLogin {
+        border:none;
+        margin-top: 10px;
+        background-color:rgb(243, 129, 129);
+        font-size: 1.2rem;
+        width:300px;
+    } */
+    .noTenesCuenta {
+        margin-top:5px;
+        font-size: 1.5rem;
+    }
+    /*MODAL*/
+    .modal-content {
+        margin-top: 50%;
+        height:400px;
+        font-size: 1.3rem;
+        align-items: center;
+        /* background-image:url("..img/fondoMarmol.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Se adapta al ancho de la pantalla(cover) */
+        /* background-size: cover; */
+    }
+    .containerModal {
+        width:300px;
+    }
+    .formRegistro div input {
+        height:40px;
+        margin-top: 10px;  
+    }
+    .formRegistro .iniciarSesion {
+        height:60px;
+        width:200px;
+    }
+}
