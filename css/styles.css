@@ -1,7 +1,7 @@
+body {
+    background-color: rgb(234, 245, 243);
+}
 @media only screen and (max-width:480px) {
-    body {
-        background-color: rgb(234, 245, 243);
-    }
     img {
         width: 100%;
     }
@@ -191,3 +191,411 @@
 }
 
 }
+
+@media only screen and (min-width:481px) {
+    img {
+        width: 100%;
+        height:60vh;
+    }
+    .usuarioOcontraseña {
+        margin-left:20px;
+        margin-top:30px;
+    }
+    .dataUser input {
+        margin-left:20%;
+        width:350px;
+        height: 70px;
+        border-radius:12px;
+        margin-top:25px;
+        font-size: 2rem;
+    }
+    .iniciarSesion {
+        margin-left:20%;
+        margin-top: 25px;
+        border-radius: 12px;
+        width:200px;
+        height:60px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: rgb(250, 153, 153);
+        background-color: rgb(138, 207, 179);
+    }
+    /* .errorLogin {
+        border:none;
+        margin-top: 10px;
+        background-color:rgb(243, 129, 129);
+        font-size: 1.2rem;
+        width:300px;
+    } */
+    .noTenesCuenta {
+        margin-left:20%;
+        margin-top:5px;
+        font-size: 1.5rem;
+    }
+    /*MODAL*/
+    .modal-content {
+        margin-top: 50%;
+        height:400px;
+        font-size: 1.3rem;
+        align-items: center;
+        /* background-image:url("..img/fondoMarmol.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Se adapta al ancho de la pantalla(cover) */
+        /* background-size: cover; */
+    }
+    .containerModal {
+        width:300px;
+    }
+    .formRegistro div input {
+        height:40px;
+        margin-top: 10px;  
+    }
+    .formRegistro .iniciarSesion {
+        height:60px;
+        width:200px;
+    }
+    /* HOME */
+    nav {
+        display:flex;
+        margin-bottom: 50px;
+        background-color: rgb(194, 226, 221);
+    }
+    nav div {
+    width:95%;
+    }
+    div h2 {
+        margin-top:20px;
+        margin-left: 20px;
+        font-size:1.3rem;
+    }
+    .cerrarSesion {
+        margin-top: 20px;
+        font-size: 1.1rem;
+    }
+    .cerrarSesion a {
+        text-decoration:none;
+        color:black;
+
+    }
+    .imgHome {
+        width:80%;
+        height:80px;
+    }
+
+    /* LISTA */
+    .bordeLista {
+        border-radius: 5px;
+    }
+    *:first-letter {
+        text-transform: capitalize;
+    }
+    .list {
+        margin: 25px auto;
+        padding:25px;
+        background-color: red;
+        width: 90%;
+        max-width: 350px;
+    }
+    .date {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        margin-left: 20px;
+    }
+
+    .dateRight {
+        display:flex;
+        align-items: center;
+    }
+    #dataMes, #dataNumero, #dataText {
+        font-weight: bold;
+    }
+
+    #dataNumero {
+        font-size:80px;
+    }
+    #dataText {
+        letter-spacing:3px;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+    #dataMes, #dataAño {
+        margin-left:10px;
+        font-size:28px;
+    }
+    .formTareas{
+        margin: 10px 0;
+        margin-left: 5px;
+        font-size:1.4rem;
+        width:85%;
+        display:grid;
+        grid-auto-flow: column;
+        grid-template-columns: auto 35px auto;
+        grid-column-gap: 10px;
+    }
+    input {
+        border:none;
+        margin-left: 20px;
+        padding-left: 10px;
+        background-color:rgb(219, 218, 218);
+        width:250px;
+    }
+    input:focus {
+        outline:none;
+    }
+    .agregarTarea, .ordenarTareas {
+        border:none;
+        font-weight: bold;
+        cursor:pointer;
+        background-color:rgb(219, 218, 218);
+    }
+    .agregarTarea {
+        height:45px;
+        margin-left: -10px;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+    .ordenarTareas {
+        background-color: rgb(228, 66, 66);
+        color:white;
+        width:80%;
+        margin-left:50px;
+        border-radius:5px;
+    }
+    #contenedorTareas ul li {
+        background-color: #6cc710;
+        margin-left: 10%;
+        font-size: 2.3rem;
+        margin-left:0 auto;
+        color:white;
+        padding:1px;
+        width:80%;
+        height:70px;
+        margin-top: 30px;
+        cursor:pointer;
+        border-radius:7px;
+        list-style:none;
+    }
+    #contenedorTareas ul {
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .eliminarTarea {
+        border:none;
+        margin-top: 25px;
+        color: red;
+        width:50px;
+        background-color:rgb(234, 245, 243);
+    }
+.realizada {
+    background-color: rgb(156, 155, 155) !important;
+    text-decoration:line-through;
+}
+}
+
+    @media only screen and (min-width:1100px) {
+        img {
+            width: 100%;
+            height:40vh;
+        }
+        .usuarioOcontraseña {
+            margin-left:20px;
+            margin-top:30px;
+        }
+        .dataUser input {
+            margin-left:30%;
+            width:350px;
+            height: 70px;
+            border-radius:12px;
+            margin-top:25px;
+            font-size: 2rem;
+        }
+        .iniciarSesion {
+            margin-left:30%;
+            margin-top: 25px;
+            border-radius: 12px;
+            width:200px;
+            height:60px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: rgb(250, 153, 153);
+            background-color: rgb(138, 207, 179);
+        }
+        /* .errorLogin {
+            border:none;
+            margin-top: 10px;
+            background-color:rgb(243, 129, 129);
+            font-size: 1.2rem;
+            width:300px;
+        } */
+        .noTenesCuenta {
+            margin-left:30%;
+            margin-top:15px;
+            font-size: 1.5rem;
+        }
+        /*MODAL*/
+        .modal-content {
+            margin-top: 50%;
+            height:400px;
+            font-size: 1.3rem;
+            align-items: center;
+            /* background-image:url("..img/fondoMarmol.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Se adapta al ancho de la pantalla(cover) */
+            /* background-size: cover; */
+        }
+        .containerModal {
+            width:300px;
+        }
+        .formRegistro div input {
+            height:40px;
+            margin-top: 10px;  
+        }
+        .formRegistro .iniciarSesion {
+            height:60px;
+            width:200px;
+        }
+        /* HOME */
+        nav {
+            display:flex;
+            margin-bottom: 20px;
+            background-color: rgb(194, 226, 221);
+        }
+        nav div {
+        width:95%;
+        }
+        div h2 {
+            margin-top:20px;
+            margin-left: 20px;
+            font-size:2rem;
+        }
+        .cerrarSesion {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+        .cerrarSesion a {
+            text-decoration:none;
+            color:black;
+    
+        }
+        .imgHome {
+            width:80%;
+            height:80px;
+        }
+    
+        /* LISTA */
+        .bordeLista {
+            border-radius: 5px;
+        }
+        *:first-letter {
+            text-transform: capitalize;
+        }
+        .list {
+            margin: 25px auto;
+            padding:25px;
+            background-color: red;
+            width: 90%;
+            max-width: 350px;
+        }
+        .date {
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            margin-left: -12%;
+        }
+    
+        .dateRight {
+            display:flex;
+            align-items: center;
+        }
+        #dataMes, #dataNumero, #dataText {
+            font-weight: bold;
+        }
+    
+        #dataNumero {
+            font-size:80px;
+        }
+        #dataText {
+            letter-spacing:3px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        #dataMes, #dataAño {
+            margin-left:10px;
+            font-size:28px;
+        }
+        .formTareas{
+            margin: 10px 0;
+            margin-left: 8.3%;
+            font-size:1.4rem;
+            width:85%;
+            display:grid;
+            grid-auto-flow: column;
+            grid-template-columns: 550px 10px auto;
+            grid-column-gap: 10px;
+        }
+        input {
+            border:none;
+            margin-left: 20px;
+            padding-left: 10px;
+            background-color:rgb(219, 218, 218);
+            width:380px;
+        }
+        input:focus {
+            outline:none;
+        }
+        .agregarTarea, .ordenarTareas {
+            border:none;
+            font-weight: bold;
+            cursor:pointer;
+            background-color:rgb(219, 218, 218);
+        }
+        .agregarTarea {
+            height:45px;
+            margin-left: -90px;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+        .ordenarTareas {
+            background-color: rgb(228, 66, 66);
+            color:white;
+            width:60%;
+            margin-left:50px;
+            border-radius:5px;
+        }
+        
+        #contenedorTareas ul li {
+            background-color: #6cc710;
+            display: inline-block !important;
+            border-radius: 4%;
+            width: 22%;
+            margin-top: 30px;
+            padding-bottom: 1%;
+            margin-left: 5%;
+            font-size: 2.3rem;
+            margin-left:0 auto;
+            color:white;
+            height:50px;
+            cursor:pointer;
+            list-style:none;
+        }
+        #contenedorTareas ul {
+            display:inline-block;
+            flex-wrap: wrap;
+            
+        }
+        .eliminarTarea {
+            border:none;
+            margin-top: 25px;
+            color: red;
+            width:40px;
+            margin-left: 10px;
+            background-color:rgb(234, 245, 243);
+        }
+    .realizada {
+        background-color: rgb(156, 155, 155) !important;
+        text-decoration:line-through;
+    }
+        }
