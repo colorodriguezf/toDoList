@@ -21,24 +21,77 @@ setDate();
 
 let API_URL = "api/tarea";
 
+let app = new Vue({
+    el: "#app",
+    data: {
+        tareas: [],
+    },
+    methods: {
+        deleteComment: async function (id) {
+            try {
+                let response = await fetch (API_URL+"/"+id, {
+                    "method":"DELETE",
+                });
+                if (response.ok) {
+                    console.log("Tarea eliminada con exito");
+                }
+            }
+            catch (e) {
+                console.log(e);
+            }
+            getTasks();
+        }
+    },
+    realizada: async function (id) {
+        let usuario = document.getElementById("nombreUsuario");
+        usuario = usuario.dataset.value;
+        let tareaRealizada = document.getElementById("id");
+        tareaRealizada.dataset.realizada;
+        let tarea= tareaRealizada.dataset.value;
+        if (tareaRealizada==0) {
+            tareaRealizada==1;
+        }
+        else {
+            tareaRealizada==0;
+        }
+        let realizada= {
+            "usuario_fk": usuario,
+            "tarea": tarea,
+            "realizada":tareaRealizada
+        }
+       
+            try {
+                let response = await fetch (API_URL+"/"+id, {
+                    "method": "PUT",
+                    "headers": {"Content-type": "application/json"},
+                    "body": JSON.stringify(realizada)
+                    });
+                if (response.ok) {
+                    console.log("Tarea eliminada con exito");
+                }
+            }
+            catch (e) {
+                console.log(e);
+            }
+            getTasks();
+    }
+    
+});
+
+
 async function getTasks() {
-    let lista = document.getElementById("contenedorTareas");
     let usuario=document.getElementById("nombre_usuario").value;
     try {
-    let response = await fetch(API_URL+"/"+usuario);
+        let response = await fetch(API_URL+"/"+usuario);
     if (response.ok) {
         let tareas = await response.json();
-        lista.innerHTML="";
-        for (const item of tareas) {
-            let tarea= item.tarea;
-            lista.innerHTML+=`<ul> 
-            <li>${tarea}</li><button class="fas fa-trash-alt eliminarTarea" value=${item.id}>a</button
-            </ul>`;
-        }    
-        let btnEliminar = document.querySelectorAll(".eliminarTarea");
-        for (let btn of btnEliminar) {
-            btn.addEventListener("click", eliminarTarea);
-        }
+        app.tareas = tareas;
+        console.log(tareas);
+        // let tareasARealizar= document.querySelectorAll(".tarea");
+        // console.log(tareasARealizar);
+        // for (let tarea of tareasARealizar) {
+        //     tarea.addEventListener("click",tareaRealizada);
+        // }
     }
 }
 catch (e) {
@@ -46,22 +99,15 @@ catch (e) {
 }
 }
 getTasks();
-async function eliminarTarea(btn) {
-    btn= event.currentTarget.value;
-    console.log(btn);
-    try {
-        let response = await fetch (API_URL+"/"+btn, {
-            "method":"DELETE",
-        });
-        if (response.ok) {
-            console.log("Tarea eliminada con exito");
-        }
-    }
-    catch (e) {
-        console.log(e);
-    }
-    getTasks();
+
+function tareaRealizada(tarea) {
+    tarea=event.currentTarget.value;
+    let tareaARealizar=document.getElementById("tarea"+tarea);
+    tareaARealizar.classList.toggle("realizada");
+    tareaARealizar.classList.remove("tarea");
+    console.log(tareaARealizar);
 }
+
 
 document.getElementById("btn-agregarTarea").addEventListener("click",agregarTarea);
 

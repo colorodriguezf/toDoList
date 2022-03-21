@@ -64,6 +64,7 @@
     nav {
         display:flex;
         margin-bottom: 50px;
+        background-color: rgb(194, 226, 221);
     }
     nav div {
     width:95%;
@@ -127,7 +128,7 @@
         margin-left:10px;
         font-size:20px;
     }
-    form {
+    .formTareas{
         margin: 10px 0;
         margin-left: 5px;
         width:85%;
@@ -182,7 +183,11 @@
         margin-top: 25px;
         color: red;
         width:50px;
+        background-color:rgb(234, 245, 243);
     }
-
+.realizada {
+    background-color: rgb(156, 155, 155) !important;
+    text-decoration:line-through;
+}
 
 }

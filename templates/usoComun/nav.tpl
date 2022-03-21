@@ -5,7 +5,7 @@
             </div>
        
             <div> 
-                <h2>{$nombre_usuario}</h2>
+                <h2 id="nombreUsuario" data-value={$nombre_usuario} >{$nombre_usuario}</h2>
             </div>
             <div class="cerrarSesion">
                 <a href="logout">Cerrar session</a>

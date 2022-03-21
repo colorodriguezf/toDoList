@@ -27,7 +27,12 @@ function getTasks($usuario) {
 
 function deleteTask($idTarea) {
     $sentencia = $this->db->prepare("DELETE FROM tareas WHERE id=?");
-        $sentencia->execute(array($idTarea));
+    $sentencia->execute(array($idTarea));
+}
+
+function tareaRealizada($usuario, $tarea, $realizado, $id)  {
+    $sentencia = $this->db->prepare("UPDATE tareas SET usuario_fk=?, tarea=?, realizada=? WHERE id=?");
+    $sentencia->execute(array($usuario, $tarea, $realizado, $id));
 }
 
 }

@@ -12,7 +12,7 @@
         </div>
         <div id="dataText"></div>
         </div>
-        <form method="POST">
+        <form class="formTareas" method="POST">
             <input type="text" id="newTask" autocomplete="off" placeholder="Nueva tarea" class="bordeLista">
             <input type="text" id="nombre_usuario" value={$nombre_usuario} hidden>
             <button type="button" class="agregarTarea" id="btn-agregarTarea"> +</button>
@@ -20,8 +20,7 @@
         </form>
 
         <div id="contenedorTareas">
-          
-            </ul>
+            {include file='templates/vue/taskList.tpl'}
         </div>
     </div>
 

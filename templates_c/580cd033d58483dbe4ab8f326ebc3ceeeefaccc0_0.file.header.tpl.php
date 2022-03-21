@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2022-03-18 00:10:32
+/* Smarty version 3.1.39, created on 2022-03-21 15:23:46
   from 'C:\xampp\htdocs\toDoList\templates\usoComun\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6233bfe85e7680_71224134',
+  'unifunc' => 'content_62388a7206ce82_63729967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '580cd033d58483dbe4ab8f326ebc3ceeeefaccc0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\toDoList\\templates\\usoComun\\header.tpl',
-      1 => 1647558609,
+      1 => 1647872480,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6233bfe85e7680_71224134 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62388a7206ce82_63729967 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -39,6 +39,10 @@ function content_6233bfe85e7680_71224134 (Smarty_Internal_Template $_smarty_tpl)
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+     <!-- development version, includes helpful console warnings -->
+     <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"><?php echo '</script'; ?>
+>
     
 
     <title>To do List</title>

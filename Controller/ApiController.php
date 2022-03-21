@@ -41,11 +41,34 @@ function eliminarTarea($params = null) {
         $tarea = $this->model->getTask($idTarea);
         if ($tarea) {
             $this->model->deleteTask($idTarea);
-            return $this->view->response("El comentario con el id=$idTarea fue borrada con exito", 200);
+            return $this->view->response("La tarea id=$idTarea fue borrada con exito", 200);
         } else {
-            return $this->view->response("El comentario con el id=$idTarea no existe", 404);
+            return $this->view->response("La tarea con el id=$idTarea no existe", 404);
         }
     }
+}
+
+function tareaRealizada($params = null) {
+    $logueado = $this->authHelper->checkLogedIn();
+    $idTarea = $params[':ID'];
+    // if ($logueado) {
+        $body = $this->getBody();
+        $realizado =0;
+        if ($body->realizada===0) {
+            $realizado=1;
+        }
+        else {
+            $realizado=0;
+        }
+        var_dump($body->realizada);
+        $tarea = $this->model->getTask($idTarea);
+        if ($tarea) {
+            $this->model->tareaRealizada($body->usuario_fk, $body->tarea, $realizado, $idTarea);
+            return $this->view->response("La tarea con el id=$idTarea fue actualizada con exito", 200);
+        } else {
+            return $this->view->response("La tarea con el id=$idTarea no existe", 404);
+        }
+    // }
 }
 
 // Devuelve el body del request
