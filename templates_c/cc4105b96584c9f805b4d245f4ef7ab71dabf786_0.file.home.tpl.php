@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2022-03-21 15:25:25
+/* Smarty version 3.1.39, created on 2022-03-23 20:23:53
   from 'C:\xampp\htdocs\toDoList\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_62388ad5f15bc3_14166316',
+  'unifunc' => 'content_623b73c9c5d3c6_10333497',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc4105b96584c9f805b4d245f4ef7ab71dabf786' => 
     array (
       0 => 'C:\\xampp\\htdocs\\toDoList\\templates\\home.tpl',
-      1 => 1647872636,
+      1 => 1648063390,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/usoComun/footer.tpl' => 1,
   ),
 ),false)) {
-function content_62388ad5f15bc3_14166316 (Smarty_Internal_Template $_smarty_tpl) {
+function content_623b73c9c5d3c6_10333497 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/usoComun/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender('file:templates/usoComun/nav.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -41,7 +41,8 @@ $_smarty_tpl->_subTemplateRender('file:templates/usoComun/nav.tpl', $_smarty_tpl
         <div id="dataText"></div>
         </div>
         <form class="formTareas" method="POST">
-            <input type="text" id="newTask" autocomplete="off" placeholder="Nueva tarea" class="bordeLista">
+            <input type="text" id="newTask" autocomplete="off" placeholder="Nueva tarea" class="bordeLista" required >
+            <input type="number" id="hs" required placeholder="hs" required>
             <input type="text" id="nombre_usuario" value=<?php echo $_smarty_tpl->tpl_vars['nombre_usuario']->value;?>
  hidden>
             <button type="button" class="agregarTarea" id="btn-agregarTarea"> +</button>

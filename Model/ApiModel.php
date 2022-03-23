@@ -6,9 +6,9 @@ class ApiModel  {
         $this->db = new PDO('mysql:host=localhost;' . 'dbname=db_todolist;charset=utf8', 'root', '');
     }
 
-function agregarTarea($usuario_fk, $tarea) {
-    $sentencia = $this->db->prepare("INSERT INTO tareas(usuario_fk, tarea) VALUES(?,?)");
-    $sentencia->execute(array($usuario_fk, $tarea));
+function agregarTarea($usuario_fk, $tarea, $realizada, $hs) {
+    $sentencia = $this->db->prepare("INSERT INTO tareas(usuario_fk, tarea, realizada, hs) VALUES(?,?,?,?)");
+    $sentencia->execute(array($usuario_fk, $tarea, $realizada, $hs));
     return $this->db->lastInsertId();
 }
 
@@ -19,7 +19,7 @@ function getTask($idTarea) {
     return $tarea;
 }
 function getTasks($usuario) {
-    $sentencia = $this->db->prepare("SELECT * FROM tareas WHERE usuario_fk =?");
+    $sentencia = $this->db->prepare("SELECT * FROM tareas WHERE usuario_fk =? ORDER BY hs ASC");
     $sentencia->execute(array($usuario));
     $tareas = $sentencia->fetchAll(PDO::FETCH_OBJ);
     return $tareas;

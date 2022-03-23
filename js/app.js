@@ -25,6 +25,7 @@ let app = new Vue({
     el: "#app",
     data: {
         tareas: [],
+        total:0
     },
     methods: {
         deleteComment: async function (id) {
@@ -48,6 +49,7 @@ let app = new Vue({
         let tareaRealizada = document.getElementById("id");
         tareaRealizada.dataset.realizada;
         let tarea= tareaRealizada.dataset.value;
+        let hs= tareaRealizada.dataset.hs;
         if (tareaRealizada==0) {
             tareaRealizada==1;
         }
@@ -57,8 +59,13 @@ let app = new Vue({
         let realizada= {
             "usuario_fk": usuario,
             "tarea": tarea,
-            "realizada":tareaRealizada
+            "realizada":tareaRealizada,
+            "hs":hs
         }
+        console.log("usuario "+usuario);
+        console.log("tarea "+tarea);
+        console.log("realizada "+realizada);
+        console.log("HS: "+hs)
        
             try {
                 let response = await fetch (API_URL+"/"+id, {
@@ -86,12 +93,21 @@ async function getTasks() {
     if (response.ok) {
         let tareas = await response.json();
         app.tareas = tareas;
+        app.total=tareas.length;
         console.log(tareas);
-        // let tareasARealizar= document.querySelectorAll(".tarea");
-        // console.log(tareasARealizar);
-        // for (let tarea of tareasARealizar) {
-        //     tarea.addEventListener("click",tareaRealizada);
-        // }
+        let tareasARealizar= document.querySelectorAll(".tarea");
+        console.log(tareasARealizar);
+        for (let tarea of tareasARealizar) {
+            if (tarea.dataset.realizada==1) {
+                tarea.classList.add("realizada");
+                tarea.classList.remove("tarea");
+                
+            }
+            else if (tarea.dataset.realizada==0) {
+                tarea.classList.add("tarea");
+                tarea.classList.remove("realizada");
+            }
+        }
     }
 }
 catch (e) {
@@ -100,13 +116,7 @@ catch (e) {
 }
 getTasks();
 
-function tareaRealizada(tarea) {
-    tarea=event.currentTarget.value;
-    let tareaARealizar=document.getElementById("tarea"+tarea);
-    tareaARealizar.classList.toggle("realizada");
-    tareaARealizar.classList.remove("tarea");
-    console.log(tareaARealizar);
-}
+
 
 
 document.getElementById("btn-agregarTarea").addEventListener("click",agregarTarea);
@@ -114,26 +124,40 @@ document.getElementById("btn-agregarTarea").addEventListener("click",agregarTare
 async function agregarTarea() {
     let nombre_usuario = document.getElementById("nombre_usuario").value;
     let tarea = document.getElementById("newTask").value;
+    let hs = document.getElementById("hs").value;
+    if (tarea != "") {
+        if (hs >= 1 && hs<= 24) {
+            let tareaNueva = {
+                "usuario_fk":nombre_usuario,
+                "tarea":tarea,
+                "realizada":0,
+                "hs":hs
+            }        
+            try {
+                let response = await fetch (API_URL, {
+                    "method":"POST",
+                    "headers":{"Content-type": "application/json"},
+                    "body": JSON.stringify(tareaNueva)
+                });
+                if (response.ok) {
+                    console.log("Tarea añadida con exito");
+                }
+            }
+            catch (e) {
+                console.log(e);
+            }
+            getTasks();
+        }
+        else {
+            console.log("Rango horario no valido, tiene que ser entre 1 y 24");
+        }
+
+        }
+
+    else {
+        console.log("No podes agregar a la lista una tarea vacia");
+    }
     
      
-    let tareaNueva = {
-        "usuario_fk":nombre_usuario,
-        "tarea":tarea
-    }
-
-    try {
-        let response = await fetch (API_URL, {
-            "method":"POST",
-            "headers":{"Content-type": "application/json"},
-            "body": JSON.stringify(tareaNueva)
-        });
-        if (response.ok) {
-            console.log("Tarea añadida con exito");
-        }
-    }
-    catch (e) {
-        console.log(e);
-    }
-    getTasks();
 }
 

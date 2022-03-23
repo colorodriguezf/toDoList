@@ -5,10 +5,10 @@
             </div>
        
             <div> 
-                <h2 id="nombreUsuario" data-value={$nombre_usuario} >{$nombre_usuario}</h2>
+                <h2 id="nombreUsuario" data-value={$nombre_usuario} >¡Hola <span class="nombreUsuario">{$nombre_usuario}</span> 🖐!</h2>
             </div>
             <div class="cerrarSesion">
-                <a href="logout">Cerrar session</a>
+                <a href="logout">Cerrar sesión</a>
             </div>
          
 </nav

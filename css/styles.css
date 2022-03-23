@@ -1,6 +1,7 @@
 body {
     background-color: rgb(234, 245, 243);
 }
+
 @media only screen and (max-width:480px) {
     img {
         width: 100%;
@@ -66,17 +67,19 @@ body {
         margin-bottom: 50px;
         background-color: rgb(194, 226, 221);
     }
+    .nombreUsuario {
+        color:rgb(219, 109, 109);
+    }
     nav div {
     width:95%;
     }
     div h2 {
         margin-top:20px;
-        margin-left: 20px;
-        font-size:1.3rem;
+        font-size:1.2rem;
     }
     .cerrarSesion {
         margin-top: 20px;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .cerrarSesion a {
         text-decoration:none;
@@ -103,6 +106,7 @@ body {
         max-width: 350px;
     }
     .date {
+        width:95%;
         display: flex;
         align-items: center;
         justify-content:space-between;
@@ -141,11 +145,15 @@ body {
         border:none;
         padding-left: 10px;
         background-color:rgb(219, 218, 218);
-        width:170px;
+        width:120px;
     }
     input:focus {
         outline:none;
     }
+    #hs {
+        margin-left:-10px;
+        width:60px;
+        }
     .agregarTarea, .ordenarTareas {
         border:none;
         font-weight: bold;
@@ -156,34 +164,69 @@ body {
         height:45px;
         border-radius: 50%;
         font-size: 18px;
+        margin-left: 10px;
     }
     .ordenarTareas {
         background-color: rgb(228, 66, 66);
         color:white;
         border-radius:5px;
+        
     }
+  
     #contenedorTareas ul li {
+        display: inline-block !important;
+        justify-content: space-between !important;
         background-color: #6cc710;
-        font-size: 1.6rem;
+        margin-left: 10%;
+        font-size: 1.8rem;
         margin-left:0 auto;
         color:white;
-        padding:12px;
+        padding:1px;
         width:80%;
-        margin-top: 30px;
+        height:50px;
+        margin-top: 15px;
         cursor:pointer;
         border-radius:7px;
-        list-style:none;
+        list-style:none; 
+        transition:all 0.2s ease; 
     }
+   
     #contenedorTareas ul {
-        display:flex;
+        display:inline-block;
         flex-wrap: wrap;
+        
+    }
+    .contenedorListaTareas {
+        display: flex;
+        background-color: none !important;
+        height: 100%;
+    }
+    .e {
+        display: flex;
+        margin-left: 30px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .hsLista {
+        width:70px;
+        margin-top:10px;
+        margin-left: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: rgb(27, 1, 1);
+        height:100%;
+        border:none;
+        
+    }
+    .contenedorBoton {
+       text-align: center;
     }
     .eliminarTarea {
         border:none;
-        margin-top: 25px;
         color: red;
-        width:50px;
-        background-color:rgb(234, 245, 243);
+        width:60px;
+        height:100%;
+        background-color:rgb(224, 158, 158) !important;
     }
 .realizada {
     background-color: rgb(156, 155, 155) !important;
@@ -261,17 +304,20 @@ body {
         margin-bottom: 50px;
         background-color: rgb(194, 226, 221);
     }
+    .nombreUsuario {
+        color:rgb(219, 109, 109);
+    }
     nav div {
     width:95%;
     }
     div h2 {
         margin-top:20px;
         margin-left: 20px;
-        font-size:1.3rem;
+        font-size:1.8rem;
     }
     .cerrarSesion {
         margin-top: 20px;
-        font-size: 1.1rem;
+        font-size: 1.8rem;
     }
     .cerrarSesion a {
         text-decoration:none;
@@ -279,8 +325,8 @@ body {
 
     }
     .imgHome {
-        width:80%;
-        height:80px;
+        width:60%;
+        height:100px;
     }
 
     /* LISTA */
@@ -334,12 +380,16 @@ body {
         grid-template-columns: auto 35px auto;
         grid-column-gap: 10px;
     }
+    #hs {
+        margin-left:-5px;
+        width:60px;
+        }
     input {
         border:none;
         margin-left: 20px;
         padding-left: 10px;
         background-color:rgb(219, 218, 218);
-        width:250px;
+        width:220px;
     }
     input:focus {
         outline:none;
@@ -350,20 +400,35 @@ body {
         cursor:pointer;
         background-color:rgb(219, 218, 218);
     }
+   
     .agregarTarea {
         height:45px;
-        margin-left: -10px;
+        width:80px;
+        margin-left: 30px;
+        border:solid 0.2px rgb(179, 179, 179);
+        /* margin-left: -90px; */
         border-radius: 50%;
         font-size: 18px;
+        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
+        
+    }
+    .agregarTarea:active {
+        /* transform:scale(1.1); ZOOM */
+        background-color:rgb(87, 87, 87);
+        border:none;
+        transform: translateY(7px);
+        box-shadow: 0px 5px 0px 0px rgb(95, 94, 94), 0 6px 20px 0 rgba(68, 68, 68, 0.19);
+
     }
     .ordenarTareas {
         background-color: rgb(228, 66, 66);
         color:white;
-        width:80%;
-        margin-left:50px;
+        width:100%;        
         border-radius:5px;
     }
     #contenedorTareas ul li {
+        display: inline-block !important;
+        justify-content: space-between !important;
         background-color: #6cc710;
         margin-left: 10%;
         font-size: 2.3rem;
@@ -375,12 +440,41 @@ body {
         margin-top: 30px;
         cursor:pointer;
         border-radius:7px;
-        list-style:none;
+        list-style:none; 
+        transition:all 0.2s ease; 
     }
+   
     #contenedorTareas ul {
-        display:flex;
+        display:inline-block;
         flex-wrap: wrap;
+        
     }
+    .contenedorListaTareas {
+        display: flex;
+        background-color: none !important;
+        height: 100%;
+    }
+    .e {
+        display: flex;
+        margin-left: 30px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .hsLista {
+        width:70px;
+        margin-top:10px;
+        margin-left: 10px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: rgb(27, 1, 1);
+        height:100%;
+        border:none;
+        
+    }
+    .contenedorBoton {
+       text-align: center;
+    }
+
     .eliminarTarea {
         border:none;
         margin-top: 25px;
@@ -394,7 +488,7 @@ body {
 }
 }
 
-    @media only screen and (min-width:1100px) {
+    @media only screen and (min-width:1200px) {
         img {
             width: 100%;
             height:40vh;
@@ -436,10 +530,11 @@ body {
         }
         /*MODAL*/
         .modal-content {
-            margin-top: 50%;
-            height:400px;
+            margin-top: 14%;
+            height:500px;
             font-size: 1.3rem;
             align-items: center;
+            background-color: rgb(241, 248, 247);
             /* background-image:url("..img/fondoMarmol.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -447,11 +542,12 @@ body {
             /* background-size: cover; */
         }
         .containerModal {
-            width:300px;
+            width:500px;
         }
         .formRegistro div input {
             height:40px;
             margin-top: 10px;  
+            width:400px;
         }
         .formRegistro .iniciarSesion {
             height:60px;
@@ -462,6 +558,9 @@ body {
             display:flex;
             margin-bottom: 20px;
             background-color: rgb(194, 226, 221);
+        }
+        .nombreUsuario {
+            color:rgb(219, 109, 109);
         }
         nav div {
         width:95%;
@@ -481,8 +580,8 @@ body {
     
         }
         .imgHome {
-            width:80%;
-            height:80px;
+            width:40%;
+            height:90px;
         }
     
         /* LISTA */
@@ -503,7 +602,7 @@ body {
             display: flex;
             align-items: center;
             justify-content:space-around;
-            margin-left: -12%;
+            margin-left: -18%;
         }
     
         .dateRight {
@@ -528,20 +627,24 @@ body {
         }
         .formTareas{
             margin: 10px 0;
-            margin-left: 8.3%;
+            /* margin-left: 8.3%; */
             font-size:1.4rem;
-            width:85%;
+            width:80%;
             display:grid;
             grid-auto-flow: column;
-            grid-template-columns: 550px 10px auto;
+            grid-template-columns: 600px 10px auto;
             grid-column-gap: 10px;
+        }
+        #hs {
+        margin-left:-180px;
+        width:60px;
         }
         input {
             border:none;
-            margin-left: 20px;
+            margin-left: 45px;
             padding-left: 10px;
             background-color:rgb(219, 218, 218);
-            width:380px;
+            width:340px;
         }
         input:focus {
             outline:none;
@@ -554,9 +657,21 @@ body {
         }
         .agregarTarea {
             height:45px;
-            margin-left: -90px;
+            width:80px;
+            border:solid 0.2px rgb(179, 179, 179);
+            /* margin-left: -90px; */
             border-radius: 50%;
             font-size: 18px;
+            box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
+            
+        }
+        .agregarTarea:active {
+            /* transform:scale(1.1); ZOOM */
+            background-color:rgb(87, 87, 87);
+            border:none;
+            transform: translateY(7px);
+            box-shadow: 0px 5px 0px 0px rgb(95, 94, 94), 0 6px 20px 0 rgba(68, 68, 68, 0.19);
+
         }
         .ordenarTareas {
             background-color: rgb(228, 66, 66);
@@ -567,35 +682,61 @@ body {
         }
         
         #contenedorTareas ul li {
-            background-color: #6cc710;
             display: inline-block !important;
+            justify-content: space-between !important;
             border-radius: 4%;
-            width: 22%;
-            margin-top: 30px;
-            padding-bottom: 1%;
-            margin-left: 5%;
-            font-size: 2.3rem;
-            margin-left:0 auto;
+            width: 27%;
+            margin-top: 25px;
+            margin-left: 3%;
+            font-size: 2.1rem;
             color:white;
-            height:50px;
+            height:60px;
             cursor:pointer;
-            list-style:none;
+            list-style:none;   
+            transition:all 0.2s ease; 
+        }
+        #contenedorTareas ul li:hover {
+            transform:scale(1.1);
         }
         #contenedorTareas ul {
             display:inline-block;
             flex-wrap: wrap;
             
         }
+        .contenedorListaTareas {
+            display: flex;
+            background-color: none !important;
+            height: 100%;
+        }
+        .e {
+            display: flex;
+            margin-left: 20px;
+            justify-content: space-between;
+        }
+        .hsLista {
+            width:70px;
+            margin-top:8px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: rgb(27, 1, 1);
+            height:100%;
+            border:none;
+            
+        }
+        .contenedorBoton {
+           text-align: center;
+        }
         .eliminarTarea {
             border:none;
-            margin-top: 25px;
+            margin-top: 12px;
+            margin-left:10px;
             color: red;
             width:40px;
-            margin-left: 10px;
-            background-color:rgb(234, 245, 243);
+            background-color: none;
         }
     .realizada {
         background-color: rgb(156, 155, 155) !important;
         text-decoration:line-through;
     }
+    
         }

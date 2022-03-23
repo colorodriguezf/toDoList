@@ -13,7 +13,8 @@
         <div id="dataText"></div>
         </div>
         <form class="formTareas" method="POST">
-            <input type="text" id="newTask" autocomplete="off" placeholder="Nueva tarea" class="bordeLista">
+            <input type="text" id="newTask" autocomplete="off" placeholder="Nueva tarea" class="bordeLista" required >
+            <input type="number" id="hs" required placeholder="hs" required>
             <input type="text" id="nombre_usuario" value={$nombre_usuario} hidden>
             <button type="button" class="agregarTarea" id="btn-agregarTarea"> +</button>
             <button type="button" class="ordenarTareas">Ordenar</button>

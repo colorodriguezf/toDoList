@@ -25,10 +25,10 @@ function getTasks($params= null) {
 function agregarTarea($params = null){
     
     $body = $this->getBody();
-    $ultimoId = $this->model->agregarTarea($body->usuario_fk, $body->tarea);
-    var_dump($ultimoId);
+    $realizada=0;
+    $ultimoId = $this->model->agregarTarea($body->usuario_fk, $body->tarea,$realizada, $body->hs);
     if ($ultimoId) {
-            $this->view->response("Tarea añadida con exito. Tendra el id= $ultimoId", 200);
+            $this->view->response("Tarea añadida con exito.(Realizar: $body->tarea a la/s $body->hs hs. Tendra el id= $ultimoId", 200);
         } else {
             $this->view->response("La  tarea no se pudo insertar", 500);
         }
