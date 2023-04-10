@@ -1,82 +1,55 @@
-body {
-    background-color: rgb(234, 245, 243);
+
+a{
+  color: #fff;
+  text-decoration: none;
+  transition: .8s ease;
+  font-style: italic;
+}
+a:hover{
+  text-decoration: underline;
+  color: red;
+}
+#nombreUsuario span {
+    color: red;
+}
+body{
+    background-image: linear-gradient(120deg,#f6d365, #fda085);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+header{
+    font-size: 1.5rem;
+}
+.contenedor-form {
+    display: flex;
+    justify-content: center;
+}
+.dentroForm {
+    gap:25px;
+}
+.input-group {
+    justify-content: center;
+}
+.form-floating input {
+    height: 30px !important;
+}
+.hs {
+    width: 100px !important;
+}
+.agregarTarea {
+    background-color: white;
+    height: 34px;
+}
+.agregarTarea svg {
+    width: 30px;
+}
+.eliminarTarea {
+    background: none;
 }
 
 @media only screen and (max-width:480px) {
-    img {
-        width: 100%;
-    }
-    .usuarioOcontraseña {
-        margin-left:20px;
-        margin-top:30px;
-    }
-    .dataUser input {
-        width:250px;
-        height: 50px;
-        border-radius:10px;
-        margin-top:15px;
-        font-size: 1.5rem;
-    }
-    .iniciarSesion {
-        margin-top: 20px;
-        border-radius: 10px;
-        width:180px;
-        height:45px;
-        font-size: 1.3rem;
-        font-weight: bold;
-        color: rgb(250, 153, 153);
-        background-color: rgb(138, 207, 179);
-    }
-    /* .errorLogin {
-        border:none;
-        margin-top: 10px;
-        background-color:rgb(243, 129, 129);
-        font-size: 1.2rem;
-        width:300px;
-    } */
-    .noTenesCuenta {
-        margin-top:5px;
-        font-size: 1.5rem;
-    }
-    /*MODAL*/
-    .modal-content {
-        margin-top: 50%;
-        height:400px;
-        font-size: 1.3rem;
-        align-items: center;
-        /* background-image:url("..img/fondoMarmol.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        /* Se adapta al ancho de la pantalla(cover) */
-        /* background-size: cover; */
-    }
-    .containerModal {
-        width:300px;
-    }
-    .formRegistro div input {
-        height:40px;
-        margin-top: 10px;  
-    }
-    .formRegistro .iniciarSesion {
-        height:60px;
-        width:200px;
-    }
-    /* HOME */
-    nav {
-        display:flex;
-        margin-bottom: 50px;
-        background-color: rgb(194, 226, 221);
-    }
-    .nombreUsuario {
-        color:rgb(219, 109, 109);
-    }
-    nav div {
-    width:95%;
-    }
-    div h2 {
-        margin-top:20px;
-        font-size:1.2rem;
-    }
+  
     .cerrarSesion {
         margin-top: 20px;
         font-size: 1rem;
@@ -91,20 +64,7 @@ body {
         height:80px;
     }
 
-    /* LISTA */
-    .bordeLista {
-        border-radius: 5px;
-    }
-    *:first-letter {
-        text-transform: capitalize;
-    }
-    .list {
-        margin: 25px auto;
-        padding:25px;
-        background-color: red;
-        width: 90%;
-        max-width: 350px;
-    }
+  
     .date {
         width:95%;
         display: flex;
@@ -132,53 +92,26 @@ body {
         margin-left:10px;
         font-size:20px;
     }
-    .formTareas{
-        margin: 10px 0;
-        margin-left: 5px;
-        width:85%;
-        display:grid;
-        grid-auto-flow: column;
-        grid-template-columns: auto 35px auto;
-        grid-column-gap: 15px;
-    }
     input {
         border:none;
-        padding-left: 10px;
-        background-color:rgb(219, 218, 218);
         width:120px;
+        border-radius: 5px;
     }
     input:focus {
         outline:none;
+    } 
+    .e {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
     }
-    #hs {
-        margin-left:-10px;
-        width:60px;
-        }
-    .agregarTarea, .ordenarTareas {
-        border:none;
-        font-weight: bold;
-        cursor:pointer;
-        background-color:rgb(219, 218, 218);
-    }
-    .agregarTarea {
-        height:45px;
-        border-radius: 50%;
-        font-size: 18px;
-        margin-left: 10px;
-    }
-    .ordenarTareas {
-        background-color: rgb(228, 66, 66);
-        color:white;
-        border-radius:5px;
-        
-    }
-  
     #contenedorTareas ul li {
         display: inline-block !important;
         justify-content: space-between !important;
         background-color: #6cc710;
         margin-left: 10%;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         margin-left:0 auto;
         color:white;
         padding:1px;
@@ -189,6 +122,8 @@ body {
         border-radius:7px;
         list-style:none; 
         transition:all 0.2s ease; 
+        align-items: center;
+        text-align:center;
     }
    
     #contenedorTareas ul {
@@ -226,7 +161,6 @@ body {
         color: red;
         width:60px;
         height:100%;
-        background-color:rgb(224, 158, 158) !important;
     }
 .realizada {
     background-color: rgb(156, 155, 155) !important;
@@ -236,80 +170,8 @@ body {
 }
 
 @media only screen and (min-width:481px) {
-    img {
-        width: 100%;
-        height:60vh;
-    }
-    .usuarioOcontraseña {
-        margin-left:20px;
-        margin-top:30px;
-    }
-    .dataUser input {
-        margin-left:20%;
-        width:350px;
-        height: 70px;
-        border-radius:12px;
-        margin-top:25px;
-        font-size: 2rem;
-    }
-    .iniciarSesion {
-        margin-left:20%;
-        margin-top: 25px;
-        border-radius: 12px;
-        width:200px;
-        height:60px;
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: rgb(250, 153, 153);
-        background-color: rgb(138, 207, 179);
-    }
-    /* .errorLogin {
-        border:none;
-        margin-top: 10px;
-        background-color:rgb(243, 129, 129);
-        font-size: 1.2rem;
-        width:300px;
-    } */
-    .noTenesCuenta {
-        margin-left:20%;
-        margin-top:5px;
-        font-size: 1.5rem;
-    }
-    /*MODAL*/
-    .modal-content {
-        margin-top: 50%;
-        height:400px;
-        font-size: 1.3rem;
-        align-items: center;
-        /* background-image:url("..img/fondoMarmol.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        /* Se adapta al ancho de la pantalla(cover) */
-        /* background-size: cover; */
-    }
-    .containerModal {
-        width:300px;
-    }
-    .formRegistro div input {
-        height:40px;
-        margin-top: 10px;  
-    }
-    .formRegistro .iniciarSesion {
-        height:60px;
-        width:200px;
-    }
+ 
     /* HOME */
-    nav {
-        display:flex;
-        margin-bottom: 50px;
-        background-color: rgb(194, 226, 221);
-    }
-    .nombreUsuario {
-        color:rgb(219, 109, 109);
-    }
-    nav div {
-    width:95%;
-    }
     div h2 {
         margin-top:20px;
         margin-left: 20px;
@@ -329,24 +191,14 @@ body {
         height:100px;
     }
 
-    /* LISTA */
-    .bordeLista {
-        border-radius: 5px;
-    }
     *:first-letter {
         text-transform: capitalize;
     }
-    .list {
-        margin: 25px auto;
-        padding:25px;
-        background-color: red;
-        width: 90%;
-        max-width: 350px;
-    }
+
     .date {
         display: flex;
         align-items: center;
-        justify-content:space-between;
+        justify-content:space-evenly;
         margin-left: 20px;
     }
 
@@ -370,21 +222,7 @@ body {
         margin-left:10px;
         font-size:28px;
     }
-    .formTareas{
-        margin: 10px 0;
-        margin-left: 5px;
-        font-size:1.4rem;
-        width:85%;
-        display:grid;
-        grid-auto-flow: column;
-        grid-template-columns: auto 35px auto;
-        grid-column-gap: 10px;
-    }
-    #hs {
-        margin-left:-5px;
-        width:60px;
-        }
-    input {
+    /* input {
         border:none;
         margin-left: 20px;
         padding-left: 10px;
@@ -393,39 +231,10 @@ body {
     }
     input:focus {
         outline:none;
-    }
-    .agregarTarea, .ordenarTareas {
-        border:none;
-        font-weight: bold;
-        cursor:pointer;
-        background-color:rgb(219, 218, 218);
-    }
+    } */
    
-    .agregarTarea {
-        height:45px;
-        width:80px;
-        margin-left: 30px;
-        border:solid 0.2px rgb(179, 179, 179);
-        /* margin-left: -90px; */
-        border-radius: 50%;
-        font-size: 18px;
-        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
-        
-    }
-    .agregarTarea:active {
-        /* transform:scale(1.1); ZOOM */
-        background-color:rgb(87, 87, 87);
-        border:none;
-        transform: translateY(7px);
-        box-shadow: 0px 5px 0px 0px rgb(95, 94, 94), 0 6px 20px 0 rgba(68, 68, 68, 0.19);
+   
 
-    }
-    .ordenarTareas {
-        background-color: rgb(228, 66, 66);
-        color:white;
-        width:100%;        
-        border-radius:5px;
-    }
     #contenedorTareas ul li {
         display: inline-block !important;
         justify-content: space-between !important;
@@ -480,7 +289,6 @@ body {
         margin-top: 25px;
         color: red;
         width:50px;
-        background-color:rgb(234, 245, 243);
     }
 .realizada {
     background-color: rgb(156, 155, 155) !important;
@@ -488,82 +296,10 @@ body {
 }
 }
 
-    @media only screen and (min-width:1200px) {
-        img {
-            width: 100%;
-            height:40vh;
-        }
-        .usuarioOcontraseña {
-            margin-left:20px;
-            margin-top:30px;
-        }
-        .dataUser input {
-            margin-left:30%;
-            width:350px;
-            height: 70px;
-            border-radius:12px;
-            margin-top:25px;
-            font-size: 2rem;
-        }
-        .iniciarSesion {
-            margin-left:30%;
-            margin-top: 25px;
-            border-radius: 12px;
-            width:200px;
-            height:60px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: rgb(250, 153, 153);
-            background-color: rgb(138, 207, 179);
-        }
-        /* .errorLogin {
-            border:none;
-            margin-top: 10px;
-            background-color:rgb(243, 129, 129);
-            font-size: 1.2rem;
-            width:300px;
-        } */
-        .noTenesCuenta {
-            margin-left:30%;
-            margin-top:15px;
-            font-size: 1.5rem;
-        }
-        /*MODAL*/
-        .modal-content {
-            margin-top: 14%;
-            height:500px;
-            font-size: 1.3rem;
-            align-items: center;
-            background-color: rgb(241, 248, 247);
-            /* background-image:url("..img/fondoMarmol.jpg");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            /* Se adapta al ancho de la pantalla(cover) */
-            /* background-size: cover; */
-        }
-        .containerModal {
-            width:500px;
-        }
-        .formRegistro div input {
-            height:40px;
-            margin-top: 10px;  
-            width:400px;
-        }
-        .formRegistro .iniciarSesion {
-            height:60px;
-            width:200px;
-        }
+    @media only screen and (min-width:800px) {
         /* HOME */
-        nav {
-            display:flex;
-            margin-bottom: 20px;
-            background-color: rgb(194, 226, 221);
-        }
         .nombreUsuario {
             color:rgb(219, 109, 109);
-        }
-        nav div {
-        width:95%;
         }
         div h2 {
             margin-top:20px;
@@ -591,18 +327,10 @@ body {
         *:first-letter {
             text-transform: capitalize;
         }
-        .list {
-            margin: 25px auto;
-            padding:25px;
-            background-color: red;
-            width: 90%;
-            max-width: 350px;
-        }
         .date {
             display: flex;
-            align-items: center;
-            justify-content:space-around;
-            margin-left: -18%;
+            justify-content: space-evenly;
+            /* gap: 98px; */
         }
     
         .dateRight {
@@ -625,20 +353,6 @@ body {
             margin-left:10px;
             font-size:28px;
         }
-        .formTareas{
-            margin: 10px 0;
-            /* margin-left: 8.3%; */
-            font-size:1.4rem;
-            width:80%;
-            display:grid;
-            grid-auto-flow: column;
-            grid-template-columns: 600px 10px auto;
-            grid-column-gap: 10px;
-        }
-        #hs {
-        margin-left:-180px;
-        width:60px;
-        }
         input {
             border:none;
             margin-left: 45px;
@@ -649,43 +363,13 @@ body {
         input:focus {
             outline:none;
         }
-        .agregarTarea, .ordenarTareas {
-            border:none;
-            font-weight: bold;
-            cursor:pointer;
-            background-color:rgb(219, 218, 218);
-        }
-        .agregarTarea {
-            height:45px;
-            width:80px;
-            border:solid 0.2px rgb(179, 179, 179);
-            /* margin-left: -90px; */
-            border-radius: 50%;
-            font-size: 18px;
-            box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
-            
-        }
-        .agregarTarea:active {
-            /* transform:scale(1.1); ZOOM */
-            background-color:rgb(87, 87, 87);
-            border:none;
-            transform: translateY(7px);
-            box-shadow: 0px 5px 0px 0px rgb(95, 94, 94), 0 6px 20px 0 rgba(68, 68, 68, 0.19);
-
-        }
-        .ordenarTareas {
-            background-color: rgb(228, 66, 66);
-            color:white;
-            width:60%;
-            margin-left:50px;
-            border-radius:5px;
-        }
+    
         
         #contenedorTareas ul li {
             display: inline-block !important;
             justify-content: space-between !important;
             border-radius: 4%;
-            width: 27%;
+            width: 46%;
             margin-top: 25px;
             margin-left: 3%;
             font-size: 2.1rem;
@@ -732,11 +416,37 @@ body {
             margin-left:10px;
             color: red;
             width:40px;
-            background-color: none;
         }
     .realizada {
         background-color: rgb(156, 155, 155) !important;
         text-decoration:line-through;
     }
     
+        }
+
+        @media only screen and (min-width: 1400px) {
+            #contenedorTareas ul li {
+                display: inline-block !important;
+                justify-content: space-between !important;
+                border-radius: 4%;
+                width: 30%;
+                margin-top: 25px;
+                margin-left: 3%;
+                font-size: 2.1rem;
+                color:white;
+                height:60px;
+                cursor:pointer;
+                list-style:none;   
+                transition:all 0.2s ease; 
+            }
+            .date {
+                margin-top: 40px;
+            }
+            #contenedorTareas {
+                display: flex;
+                text-align: center;
+               justify-content: center;
+               align-items: center;
+               margin-top: 70px;
+            }
         }

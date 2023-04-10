@@ -6,8 +6,12 @@ class TaskView {
     function __construct() {
         $this->smarty = new Smarty();
     }
-    function showLoginORRegister() {
-        $this->smarty->display('templates/showLoginORRegister.tpl');
+    function showLogin() {
+        $this->smarty->display('templates/showLogin.tpl');
+    }
+
+    function showRegister() {
+        $this->smarty->display('templates/showRegister.tpl');
     }
 
     function showHome($nombre_usuario="", $user_id = "", $tareas="") {

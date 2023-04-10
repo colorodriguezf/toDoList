@@ -14,8 +14,12 @@ class TaskController {
         $this->authHelper = new AuthHelper();
     }
 
-    function showLoginORRegister() {
-        $this->view->showLoginORRegister();
+    function login() {
+        $this->view->showLogin();
+    }
+
+    function register() {
+        $this->view->showRegister();
     }
 
     function showHome() {

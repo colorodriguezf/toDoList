@@ -42,7 +42,7 @@ class UserController {
                 $this->taskView->showHomeLocation();
               }
               else {
-                  $this->taskView->showLoginORRegister("usuario o contraseña incorrectos");
+                  $this->taskView->showLogin("usuario o contraseña incorrectos");
               }
             } 
           }

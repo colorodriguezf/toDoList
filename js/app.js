@@ -11,7 +11,6 @@ let contenedorTareas= document.getElementById("contenedorTareas");
 let setDate = () => {
     dataNumero.innerHTML="2";
     let date = new Date();
-    console.log(date);
     dataNumero.textContent = date.toLocaleString('es', { day: 'numeric'});
     dataText.textContent = date.toLocaleString('es', { weekday: 'long'});
     dataMes.textContent = date.toLocaleString('es', { month: 'short'});
@@ -44,6 +43,7 @@ let app = new Vue({
         }
     },
     realizada: async function (id) {
+        console.log("entro");
         let usuario = document.getElementById("nombreUsuario");
         usuario = usuario.dataset.value;
         let tareaRealizada = document.getElementById("id");
@@ -74,11 +74,11 @@ let app = new Vue({
                     "body": JSON.stringify(realizada)
                     });
                 if (response.ok) {
-                    console.log("Tarea eliminada con exito");
+                    // console.log("Tarea eliminada con exito");
                 }
             }
             catch (e) {
-                console.log(e);
+                // console.log(e);
             }
             getTasks();
     }
@@ -94,7 +94,7 @@ async function getTasks() {
         let tareas = await response.json();
         app.tareas = tareas;
         app.total=tareas.length;
-        console.log(tareas);
+        // console.log(tareas);
         let tareasARealizar= document.querySelectorAll(".tarea");
         console.log(tareasARealizar);
         for (let tarea of tareasARealizar) {
@@ -111,7 +111,7 @@ async function getTasks() {
     }
 }
 catch (e) {
-    console.log(e);
+    // console.log(e);
 }
 }
 getTasks();
@@ -140,24 +140,26 @@ async function agregarTarea() {
                     "body": JSON.stringify(tareaNueva)
                 });
                 if (response.ok) {
-                    console.log("Tarea añadida con exito");
+                    // console.log("Tarea añadida con exito");
                 }
             }
             catch (e) {
-                console.log(e);
+                // console.log(e);
             }
             getTasks();
         }
         else {
-            console.log("Rango horario no valido, tiene que ser entre 1 y 24");
+            // console.log("Rango horario no valido, tiene que ser entre 1 y 24");
         }
 
         }
 
     else {
-        console.log("No podes agregar a la lista una tarea vacia");
+        // console.log("No podes agregar a la lista una tarea vacia");
     }
     
      
 }
+
+
 
